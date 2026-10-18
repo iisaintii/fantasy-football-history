@@ -4,9 +4,11 @@ import pandas as pd
 import streamlit as st
 
 
-DB_PATH = Path(
-    r"C:\FantasyFootballHistory\data\fantasy.db"
-)
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+
+DB_PATH = BASE_DIR / "fantasy.db"
 
 
 def get_connection():
